@@ -28,7 +28,7 @@ want to update or unset an option which can occur on multiple lines, a Perl
 regular expression C<value_regex> needs to be given. Only the existing values
 that match the regex will be updated or unset. If you want to handle lines
 that do not match the regex, just prepend a single C<!> (exclamation point) in
-front (see L<Examples>).
+front (see L</Examples>).
 
 The C<type> specifier can be C<--int>, C<--num>, or C<--bool>, to ensure that
 the variable(s) are of the given type and convert the value to the canonical
@@ -371,7 +371,7 @@ All the other lines (and the remainder of the line after the section header)
 are recognized as setting variables, in the form C<name = value>. If there is
 no equal sign on the line, the entire line is taken as name and the variable
 is recognized as boolean C<true>. The variable names are case-insensitive,
-allow only alphanumeric characters and C<->, and must start with an alphabetic
+allow only alphanumeric characters and C<_>, and must start with an alphabetic
 character. There can be more than one value for a given variable; we say then
 that the variable is multivalued.
 
@@ -391,7 +391,7 @@ trailing whitespace, or if the variable value contains comment characters
 variable values must be escaped: use C<\"> for C<"> and C<\\> for C<\>.
 
 The following escape sequences (beside C<\"> and C<\\>) are recognized: C<\n>
-for newline character (NL), C<\t> for horizontal tabulation (HT, TAB) and
+for newline character (LF), C<\t> for horizontal tabulation (HT, TAB) and
 C<\b> for backspace (BS). No other character escape sequence or octal
 character sequence is valid.
 
@@ -485,13 +485,13 @@ C<sql>.
 =item C<core.verbosity>
 
 An integer determining how verbose Sqitch should be. Defaults to 1. Set to 0
-to silence status messages and to 2 or three to increase verbosity. Error
+to silence status messages and to 2 or 3 to increase verbosity. Error
 message output will not be affected by this property.
 
 =item C<core.pager>
 
 The command to use as a pager program. This overrides the C<PAGER>
-environment variable on UNIX like systems. Both can be overridden by setting
+environment variable on UNIX-like systems. Both can be overridden by setting
 the C<$SQITCH_PAGER> environment variable. If none of these variables are
 set, Sqitch makes a best-effort search among the commonly installed pager
 programs like C<less> and C<more>.
@@ -499,7 +499,7 @@ programs like C<less> and C<more>.
 =item C<core.editor>
 
 The command to use as a editor program. This overrides the C<EDITOR>
-environment variable on UNIX like systems. Both can be overridden by setting
+environment variable on UNIX-like systems. Both can be overridden by setting
 the C<$SQITCH_EDITOR> environment variable. If none of these variables are
 set, Sqitch defaults to C<notepad.exe> on Windows and C<vi> elsewhere.
 
