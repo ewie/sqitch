@@ -192,7 +192,7 @@ For example:
 =head2 Use a Password File
 
 If you must use password authentication with your database server, you may be
-able to use a protected password file. This is file with access limited only
+able to use a protected password file. This is a file with access limited only
 to the current user that the server client library can read in. As such, the
 format is specified by the database vendor, and not all database servers offer
 the feature. Here's how the database engines supported by Sqitch shake out:
@@ -205,7 +205,7 @@ PostgreSQL will use a
 L<F<.pgpass> file|https://www.postgresql.org/docs/current/static/libpq-pgpass.html> in the
 user's home directory to or referenced by the C<$PGPASSFILE> environment
 variable. This file must limit access only to the current user (C<0600>) and
-contains lines specify authentication rules as follows:
+contains lines specifying authentication rules as follows:
 
   hostname:port:database:username:password
 
@@ -375,7 +375,7 @@ After which the target is available by its name:
 
   sqitch deploy widgets
 
-See L<sqitch-targets> and C<sqitch-configuration> for details  on target
+See L<sqitch-target> and L<sqitch-configuration> for details  on target
 configuration.
 
 =head1 See Also
