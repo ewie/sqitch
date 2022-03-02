@@ -4,7 +4,7 @@ sqitch-bundle - Bundle a Sqitch project for distribution
 
 =head1 Synopsis
 
-  sqitch bundle [options
+  sqitch bundle [options]
   sqitch bundle --dest-dir widgets-1.0.0
   sqitch bundle --all
   sqitch bundle pg mysql
@@ -20,10 +20,10 @@ By default, the C<bundle> command will bundle the plan and scripts for the
 default plan and top directory, as defined by the core configuration and
 command-line options. Pass the C<--all> option to have it iterate over all
 known plans and top directories (as specified for engines and targets) and
-bundle them all. This works well for creating a a single bundle with all
+bundle them all. This works well for creating a single bundle with all
 plans and scripts.
 
-To specify which plans an top directories to bundle, pass the target, engine,
+To specify which plans and top directories to bundle, pass the target, engine,
 or plan file names as arguments. See L</Examples> for examples.
 
 =over
@@ -115,7 +115,7 @@ Bundle a project including changes C<adduser> through C<@v1.0>:
 
   sqitch bundle --from adduser --to @v1.0
 
-Bundle a the C<pg> engine plans with changes C<adduser> through C<@v1.0>, and
+Bundle the C<pg> engine plans with changes C<adduser> through C<@v1.0>, and
 the C<sqlite> engine with changes from the start of the plan up to C<widgets>:
 
   sqitch bundle pg adduser @v1.0 sqlite @ROOT wigets
