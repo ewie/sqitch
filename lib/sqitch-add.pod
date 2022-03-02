@@ -4,7 +4,7 @@ sqitch-add - Add a database change to plans
 
 =head1 Synopsis
 
-  sqitch add widgets [options
+  sqitch add widgets [options]
   sqitch add blankets --all
   sqitch add --change sprockets pg sql
   sqitch add slinkies --require sprockets --set schema=industry
@@ -16,7 +16,7 @@ the creation of script files in the deploy, revert, and verify directories,
 and possibly others. The content of these files is determined by the
 evaluation of templates. By default, system templates in
 F<$(prefix)/etc/sqitch/templates> are used. These can be overridden by a
-single user by creating templates in F<~/.sqitch/templates/> See L</Templates>
+single user by creating templates in F<~/.sqitch/templates/>. See L</Templates>
 for details.
 
 The paths and extensions of the generated scripts depend on the configuration
@@ -154,7 +154,7 @@ Open the generated change scripts in an editor.
 
 =item C<--no-open-editor>
 
-Do not open the change scripts in an editor. Useful when L<C<add.open_editor>>
+Do not open the change scripts in an editor. Useful when L</C<add.open_editor>>
 is true.
 
 =item C<--plan-file>
@@ -364,7 +364,7 @@ C<snowflake>.
 =item C<project>
 
 The name of the Sqitch project to which the change was added. The project name
-is set in the plan by the L<C<init> command>|sqitch-init>.
+is set in the plan by the L<C<init>|sqitch-init> command.
 
 =item C<requires>
 
