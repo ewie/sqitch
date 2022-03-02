@@ -626,20 +626,6 @@ F<git> found in the path.
 
 =back
 
-=head3 C<user>
-
-=over
-
-=item C<user.email>
-
-Your email address to be recorded in any newly planned changes.
-
-=item C<user.name>
-
-Your full name to be recorded in any newly planned changes.
-
-=back
-
 =head1 Sqitch
 
 Part of the L<sqitch> suite.
