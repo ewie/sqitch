@@ -56,7 +56,7 @@ changes will be reverted to the point at which deployment began.
 =item C<change>
 
 In the event of failure, no changes will be reverted. This is on the
-assumption that a change is atomic, and thus may may be deployed again.
+assumption that a change is atomic, and thus may be deployed again.
 
 =back
 
@@ -92,7 +92,7 @@ loaded from L</Configuration Variables>.
 
 =item C<--set-revert>
 
-Sets a variable name to be used by the database engine client during when
+Sets a variable name to be used by the database engine client when
 reverting, if it supports variables. The format must be C<name=value>, e.g.,
 C<--set defuser='Homer Simpson'>. Overrides any values from C<--set> or values
 loaded from L</Configuration Variables>.
